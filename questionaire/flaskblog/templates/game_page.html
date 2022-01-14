@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% for name in user %}
+        <h1 class="text-muted">Welcome there {{ name.username }} Please answer the following question</h1>
+    {% endfor %}
+
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <h1 class="text-muted">When did malaysia gain independence</h1>
+        <div class="form-group">
+            {{ form.question_1.label(class="form-control-label") }}
+            <div class="form-group">
+                {{ form.question_1.label(class="form-control-label") }}
+                {{ form.question_1(class="form-control form-control-lg") }}
+            </div>
+        </div>
+
+        <h1 class="text-muted">What is the name of Malaysia before the unification</h1>
+        <div class="form-group">
+            {{ form.question_2.label(class="form-control-label") }}
+            <div class="form-group">
+                {{ form.question_2.label(class="form-control-label") }}
+                {{ form.question_2(class="form-control form-control-lg") }}
+            </div>
+        </div>
+
+        <h1 class="text-muted">What is the capital city of Malaysia</h1>
+        <div class="form-group">
+            {{ form.question_3.label(class="form-control-label") }}
+            <div class="form-group">
+                {{ form.question_3.label(class="form-control-label") }}
+                {{ form.question_3(class="form-control form-control-lg") }}
+            </div>
+        </div>
+
+        <h1 class="text-muted">Who is ur current prime minister of Malaysia</h1>
+        <div class="form-group">
+            {{ form.question_4.label(class="form-control-label") }}
+            <div class="form-group">
+                {{ form.question_4.label(class="form-control-label") }}
+                {{ form.question_4(class="form-control form-control-lg") }}
+            </div>
+        </div>
+
+        <h1 class="text-muted">How many PM do we have so far</h1>
+        <div class="form-group">
+            {{ form.question_5.label(class="form-control-label") }}
+            <div class="form-group">
+                {{ form.question_5.label(class="form-control-label") }}
+                {{ form.question_5(class="form-control form-control-lg") }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+
+    </form>
+
+{% endblock %}
